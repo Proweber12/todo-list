@@ -1,6 +1,6 @@
 # Заметки TODO на Django REST Framework
 
-Учебный проект для практики навыков по Django, Django REST Framework и React
+Учебный проект для практики навыков по Django, Django REST Framework и React.
 
 ## Стек
 
