@@ -1,11 +1,11 @@
 from rest_framework.serializers import ModelSerializer
 
-from .models import Users
+from .models import User
 
 
-class UsersModelSerializer(ModelSerializer):
+class UserModelSerializer(ModelSerializer):
     class Meta:
-        model = Users
+        model = User
         fields = (
             "username",
             "first_name",
