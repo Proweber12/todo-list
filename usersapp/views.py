@@ -1,10 +1,10 @@
-from rest_framework.renderers import JSONRenderer
+from rest_framework.renderers import StaticHTMLRenderer
 from rest_framework.viewsets import ModelViewSet
 
-from .models import Users
-from .serializers import UsersModelSerializer
+from .models import User
+from .serializers import UserModelSerializer
 
 
-class UsersModelViewSet(ModelViewSet):
-    queryset = Users.objects.all()
-    serializer_class = UsersModelSerializer
+class UserModelViewSet(ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserModelSerializer
