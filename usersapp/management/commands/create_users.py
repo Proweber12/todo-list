@@ -8,15 +8,17 @@ class Command(BaseCommand):
         User.objects.all().delete()
 
         User.objects.create_superuser(
-            username="admin", first_name="Михаил", last_name="Савченко", email="admin@gmail.com"
+            username="admin", first_name="Михаил", last_name="Савченко", email="admin@gmail.com", password="admin"
         )
 
         User.objects.create_user(
-            username="Petya23", first_name="Пётр", last_name="Иванов", email="petya.ivanov@gmail.com"
+            username="Petya23", first_name="Пётр", last_name="Иванов", email="petya.ivanov@gmail.com", password="petya"
         )
 
         User.objects.create_user(
-            username="Alex243", first_name="Алексей", last_name="Петров", email="alex.petrov@gmail.com"
+            username="Alex243", first_name="Алексей", last_name="Петров", email="alex.petrov@gmail.com", password="alex"
         )
 
-        User.objects.create_user(username="Max69", first_name="Максим", last_name="Копылов", email="max.kop@gmail.com")
+        User.objects.create_user(
+            username="Max69", first_name="Максим", last_name="Копылов", email="max.kop@gmail.com", password="max"
+        )

@@ -32,7 +32,7 @@ footer {
 li, a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: blue;
 }
 
 .menu > ul > li {
