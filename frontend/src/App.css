@@ -35,11 +35,19 @@ li, a {
   color: blue;
 }
 
-.menu > ul > li {
+.menu > ul > li,
+.menu > ul > div > li {
   position: relative;
 }
 
-.menu > ul > li > a::after {
+.menu > ul > div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu > ul > li > a::after,
+.menu > ul > div > li > a::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -56,7 +64,8 @@ li, a {
 }
 
 .menu > ul > li > a:hover:after,
-.menu > ul > li > a:focus:after {
+.menu > ul > li > a:focus:after,
+.menu > ul > div > li > a:hover:after{
   width: 100%;
 }
 
