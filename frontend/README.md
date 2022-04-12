@@ -482,12 +482,12 @@ import logo from './logo.png'; // Tell Webpack this JS file uses this image
 
 console.log(logo); // /logo.84287d09.png
 
-function Header() {
+function Menu() {
   // Import result is the URL of your image
   return <img src={logo} alt="Logo" />;
 }
 
-export default Header;
+export default Menu;
 ```
 
 This ensures that when the project is built, Webpack will correctly move the images into the build folder, and provide us with correct paths.

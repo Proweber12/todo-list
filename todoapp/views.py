@@ -1,5 +1,6 @@
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.viewsets import ModelViewSet
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from .filters import ProjectFilter, TodoFilter
 from .models import Project, Todo
@@ -15,6 +16,7 @@ class ProjectModelViewSet(ModelViewSet):
     serializer_class = ProjectModelSerializer
     pagination_class = ProjectLimitOffsetPagination
     filterset_class = ProjectFilter
+    authentication_classes = [JWTAuthentication]
 
 
 class TodoLimitOffsetPagination(PageNumberPagination):
@@ -26,6 +28,7 @@ class TodoModelViewSet(ModelViewSet):
     serializer_class = TodoModelSerializer
     pagination_class = TodoLimitOffsetPagination
     filterset_class = TodoFilter
+    authentication_classes = [JWTAuthentication]
 
     def perform_destroy(self, instance):
         instance.is_active = False

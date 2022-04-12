@@ -2,7 +2,18 @@ import React from "react";
 
 import {Link} from "react-router-dom";
 
-const ProjectItem = ({project}) => {
+const ProjectItem = ({project, user}) => {
+
+    let one_user = [];
+    for (let i of user) {
+        for (let j of project.users){
+            if (i.id === j) {
+            one_user.push(i.username);
+            break;
+            }
+        }
+    }
+
     return (
         <tr>
 
@@ -10,13 +21,13 @@ const ProjectItem = ({project}) => {
 
             <td>{project.link}</td>
 
-            <td>{project.users}</td>
+            <td>{one_user.join(', ')}</td>
 
         </tr>
     )
 }
 
-const ProjectList = ({projects}) => {
+const ProjectList = ({projects, users}) => {
 
     return (
         <table>
@@ -27,7 +38,7 @@ const ProjectList = ({projects}) => {
 
             <th>Участники</th>
 
-            {projects.map((project) => <ProjectItem project={project}/>)}
+            {projects.map((project) => <ProjectItem project={project} user={users}/>)}
 
         </table>
     )
