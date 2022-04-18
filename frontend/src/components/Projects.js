@@ -4,11 +4,11 @@ import {Link} from "react-router-dom";
 
 const ProjectItem = ({project, user}) => {
 
-    let one_user = [];
+    let userList = [];
     for (let i of user) {
         for (let j of project.users){
             if (i.id === j) {
-            one_user.push(i.username);
+            userList.push(i.username);
             break;
             }
         }
@@ -21,7 +21,7 @@ const ProjectItem = ({project, user}) => {
 
             <td>{project.link}</td>
 
-            <td>{one_user.join(', ')}</td>
+            <td>{userList.join(', ')}</td>
 
         </tr>
     )

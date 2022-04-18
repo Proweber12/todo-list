@@ -1,3 +1,6 @@
+# Тесты отрабатывают корректно, при включенной базовой и сессионной аутентификации в settings.py, вместо JWT и Token,
+# а также выключить(закомментировать) authentication_classes = [JWTAuthentication] в todoapp/views.py в 2-ух классах
+
 from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APIRequestFactory, APITestCase, force_authenticate
@@ -15,8 +18,8 @@ class TestProjectModelViewSet(APITestCase):
         self.data_user = {'username': 'mihail315', 'first_name': 'Mihail', 'last_name': 'Savchenko',
                          'email': 'msav@gmail.com'}
         self.user = User.objects.create(**self.data_user)
-        self.data = {'name': "Интернет-магазин", 'users': [self.user], 'link': 'https://shop.com'}
-        self.data_put = {'name': "Сайт-визитка", 'users': [self.user], 'link': 'https://vizitka.com'}
+        self.data = {'name': 'Интернет-магазин', 'users': [self.user], 'link': 'https://shop.com'}
+        self.data_put = {'name': 'Сайт-визитка', 'users': [self.user], 'link': 'https://vizitka.com'}
 
         self.url = '/api/projects/'
 

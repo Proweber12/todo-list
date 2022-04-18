@@ -3,10 +3,14 @@ from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from .models import User
-from .serializers import UserModelSerializer
+from .serializers import UserModelSerializer, UserBaseModelSerializer
 
 
 class UserCustomViewSet(ListModelMixin, RetrieveModelMixin, UpdateModelMixin, GenericViewSet):
     queryset = User.objects.all()
-    serializer_class = UserModelSerializer
-    # authentication_classes = [JWTAuthentication]
+    authentication_classes = [JWTAuthentication]
+
+    def get_serializer_class(self):
+        if self.request.version == '0.2':
+            return UserModelSerializer
+        return UserBaseModelSerializer

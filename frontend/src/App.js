@@ -31,7 +31,7 @@ class App extends React.Component {
     load_data(){
         const headers = this.get_headers()
 
-        axios.get('http://127.0.0.1:8000/api/users/', {headers}).then(response => {
+        axios.get('http://127.0.0.1:8000/api/users/0.1/', {headers}).then(response => {
                 this.setState(
                     {
                         "users": response.data.results
@@ -82,6 +82,7 @@ class App extends React.Component {
                 'username': username,
             }, () => this.load_data()
         )
+        location.href = "/"
     }
 
     get_token(username, password) {
@@ -152,7 +153,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path='/' component={() => <TodoList projects={this.state.projects} users={this.state.users} todos={this.state.todos}/>}/>
                         <Route exact path='/users' component={() => <UserList users={this.state.users}/>}/>
-                        <Route exact path='/users/:id' component={() => <ProjectListUsers projects={this.state.projects}/>}/>
+                        <Route exact path='/users/:id' component={() => <ProjectListUsers users={this.state.users} projects={this.state.projects}/>}/>
                         <Route exact path='/projects' component={() => <ProjectList users={this.state.users} projects={this.state.projects}/>}/>
                         <Route exact path='/projects/:id' component={() => <ProjectDetail users={this.state.users} projects={this.state.projects}/>}/>
 

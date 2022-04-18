@@ -1,5 +1,7 @@
+# Тесты отрабатывают корректно, при включенной базовой и сессионной аутентификации в settings.py, вместо JWT и Token,
+# а также выключить(закомментировать) authentication_classes = [JWTAuthentication] в usersapp/views.py в 1-ом классе
+
 from django.test import TestCase
-from requests.auth import HTTPBasicAuth
 from rest_framework import status
 from rest_framework.test import APIClient, APITestCase, RequestsClient, APIRequestFactory, force_authenticate
 from mixer.backend.django import mixer
