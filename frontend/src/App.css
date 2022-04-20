@@ -41,7 +41,7 @@ li, a {
 }
 
 .menu > ul > div {
-  width: 50%;
+  width: 54.8%;
   display: flex;
   justify-content: space-between;
 }
@@ -114,4 +114,27 @@ li, a {
   letter-spacing: .05em;
   color: #fff;
   cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin-top: 70px;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  padding: 0 90px;
+  text-align: center;
+}
+
+tr > a {
+  width: 100%;
+  text-align: center;
 }

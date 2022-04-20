@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
+from graphene_django.views import GraphQLView
 
 # from usersapp.views import UserCustomViewSet
 from todoapp.views import ProjectModelViewSet, TodoModelViewSet
@@ -36,5 +37,7 @@ urlpatterns = [
     path('api/users/0.1/', include('usersapp.urls', namespace='0.1')),
     path('api/users/0.2/', include('usersapp.urls', namespace='0.2')),
 
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0))
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
+
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
 ]

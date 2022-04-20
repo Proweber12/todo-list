@@ -30,17 +30,25 @@ const ProjectItem = ({project, user}) => {
 const ProjectList = ({projects, users}) => {
 
     return (
-        <table>
 
-            <th>Название</th>
+        <main>
 
-            <th>Ссылка</th>
+            <h1>Проекты</h1>
 
-            <th>Участники</th>
+            <table>
 
-            {projects.map((project) => <ProjectItem project={project} user={users}/>)}
+                <th>Название</th>
 
-        </table>
+                <th>Ссылка</th>
+
+                <th>Участники</th>
+
+                {projects.map((project) => <ProjectItem project={project} user={users}/>)}
+
+            </table>
+
+        </main>
+
     )
 
 }
