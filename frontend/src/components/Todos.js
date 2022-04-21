@@ -45,23 +45,31 @@ const TodoItem = ({todo, users, projects}) => {
 const TodoList = ({todos, users, projects}) => {
 
     return (
-        <table>
 
-            <th>Текст</th>
+        <main>
 
-            <th>Создано</th>
+            <h1>TODO`s</h1>
 
-            <th>Обновлено</th>
+            <table>
 
-            <th>Активность</th>
+                <th>Текст</th>
 
-            <th>Создатель</th>
+                <th>Создано</th>
 
-            <th>Проект</th>
+                <th>Обновлено</th>
 
-            {todos.map((todo) => <TodoItem todo={todo} projects={projects} users={users}/>)}
+                <th>Активность</th>
 
-        </table>
+                <th>Создатель</th>
+
+                <th>Проект</th>
+
+                {todos.map((todo) => <TodoItem todo={todo} projects={projects} users={users}/>)}
+
+            </table>
+
+        </main>
+
     )
 
 }

@@ -35,19 +35,26 @@ const ProjectListUsers = ({projects, users}) => {
     let filter_item = projects.filter((project => project.users.includes(Number(id))))
 
     return (
-        <table>
 
-            <th>Id</th>
+        <main>
 
-            <th>Имя</th>
+            <h1>Проекты выбранного пользователя</h1>
 
-            <th>Ссылка</th>
+            <table>
 
-            <th>Участники</th>
+                <th>Id проекта</th>
 
-            {filter_item.map((project) => <ProjectItem project={project} user={users}/>)}
+                <th>Название</th>
 
-        </table>
+                <th>Ссылка</th>
+
+                <th>Участники</th>
+
+                {filter_item.map((project) => <ProjectItem project={project} user={users}/>)}
+
+            </table>
+
+        </main>
     )
 
 }

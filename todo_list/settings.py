@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "django_filters",
     "drf_yasg",
+    "graphene_django",
     "usersapp",
     "todoapp",
 ]
@@ -170,3 +171,8 @@ REST_FRAMEWORK = {
 
 ROTATE_REFRESH_TOKENS = True
 BLACKLIST_AFTER_ROTATION = True
+
+
+GRAPHENE = {
+    "SCHEMA": "todo_list.schema.schema"
+}
