@@ -2,7 +2,7 @@ import React from "react";
 
 import {Link} from "react-router-dom";
 
-const ProjectItem = ({project, user}) => {
+const ProjectItem = ({project, user, deleteProject}) => {
 
     let userList = [];
     for (let i of user) {
@@ -23,11 +23,15 @@ const ProjectItem = ({project, user}) => {
 
             <td>{userList.join(', ')}</td>
 
+            <td><button onClick={() => deleteProject(project.id)} type="button">УДАЛИТЬ</button></td>
+
+            <td><Link to={`/projects/change/${project.id}`}>ИЗМЕНИТЬ</Link></td>
+
         </tr>
     )
 }
 
-const ProjectList = ({projects, users}) => {
+const ProjectList = ({projects, users, deleteProject}) => {
 
     return (
 
@@ -43,9 +47,17 @@ const ProjectList = ({projects, users}) => {
 
                 <th>Участники</th>
 
-                {projects.map((project) => <ProjectItem project={project} user={users}/>)}
+                <th>Удаление</th>
+
+                <th>Изменение</th>
+
+                {projects.map((project) => <ProjectItem project={project} user={users} deleteProject={deleteProject}/>)}
 
             </table>
+
+            <Link to='/projects/create' className='create'>Создать проект</Link>
+
+            <Link to='/projects/find' className='find'>Найти проект</Link>
 
         </main>
 

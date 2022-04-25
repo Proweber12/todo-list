@@ -25,7 +25,6 @@ class LoginForm extends React.Component {
                 <input type="text" className="login_input" name="login" placeholder="Логин" value={this.state.login} onChange={(event) => this.handleChange(event)}/>
                 <input type="password" className="login_input" name="password" placeholder="Пароль" value={this.state.password} onChange={(event) => this.handleChange(event)}/>
                 <input type="submit" className="login_input_submit" value="Войти"/>
-                <input type="submit" className="login_input_submit" value="Зарегистрироваться"/>
             </form>
         );
     }

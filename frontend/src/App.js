@@ -9,7 +9,11 @@ import UserList from "./components/Users";
 import ProjectList from "./components/Projects";
 import ProjectListUsers from "./components/UserProjects";
 import ProjectDetail from "./components/ProjectDetail";
+import ProjectCreateForm from "./components/ProjectCreateForm";
+import ProjectChangeForm from "./components/ProjectChangeForm";
+import ProjectFindForm from "./components/ProjectFindForm";
 import TodoList from "./components/Todos";
+import TodoCreateForm from "./components/TodoCreateForm";
 import NotFound404 from "./components/NotFound404";
 import LoginForm from "./components/Auth";
 import {Route, BrowserRouter, Switch, Link} from "react-router-dom";
@@ -21,11 +25,65 @@ class App extends React.Component {
         this.state = {
             'users': [],
             'projects': [],
+            'projects_search': [],
             'todos': [],
             'access_token': '',
             'refresh_token': '',
             'username': '',
         }
+    }
+
+    createTodo(text, creator, project){
+        const headers = this.get_headers()
+        const data = {'text': text, 'creator': creator, 'project': project}
+
+        axios.post(`http://127.0.0.1:8000/api/todo/`, data, {headers}).then(response => {
+            this.load_data()
+        })
+    }
+
+    deleteTodo(id){
+        const headers = this.get_headers()
+
+        axios.delete(`http://127.0.0.1:8000/api/todo/${id}`, {headers}).then(response => {
+            this.load_data()
+        })
+    }
+
+    createProject(name, link, users){
+        const headers = this.get_headers()
+        const data = {'name': name, 'link': link, 'users': users}
+
+        axios.post(`http://127.0.0.1:8000/api/projects/`, data, {headers}).then(response => {
+            this.load_data()
+        })
+    }
+
+    changeProject(id, name, link, users){
+        const headers = this.get_headers()
+        const data = {'name': name, 'link': link, 'users': users}
+
+        axios.put(`http://127.0.0.1:8000/api/projects/${id}/`, data, {headers}).then(response => {
+            this.load_data()
+        })
+    }
+
+    findProject(search){
+        const headers = this.get_headers()
+
+        axios.get(`http://127.0.0.1:8000/api/projects/?name=${search}`, {headers}).then(response => {
+            this.setState({
+                "projects": response.data.results
+            })
+        })
+    }
+
+    deleteProject(id){
+        const headers = this.get_headers()
+
+        axios.delete(`http://127.0.0.1:8000/api/projects/${id}`, {headers}).then(response => {
+            this.load_data()
+        })
     }
 
     load_data(){
@@ -99,7 +157,7 @@ class App extends React.Component {
 
     get_headers() {
         let headers = {
-            'Content-Type': 'applications/json'
+            'Content-Type': 'application/json'
         }
 
         if(this.is_auth()) {
@@ -151,10 +209,26 @@ class App extends React.Component {
                         </div>
                     </header>
                     <Switch>
-                        <Route exact path='/' component={() => <TodoList projects={this.state.projects} users={this.state.users} todos={this.state.todos}/>}/>
-                        <Route exact path='/users' component={() => <UserList users={this.state.users}/>}/>
-                        <Route exact path='/users/:id' component={() => <ProjectListUsers users={this.state.users} projects={this.state.projects}/>}/>
-                        <Route exact path='/projects' component={() => <ProjectList users={this.state.users} projects={this.state.projects}/>}/>
+                        <Route exact path='/' component={() => <TodoList projects={this.state.projects} users={this.state.users} todos={this.state.todos} deleteTodo={(id) => this.deleteTodo(id)}/>}/>
+                        <Route exact path='/todo/create' component={() => this.is_auth()
+                            ? <TodoCreateForm projects={this.state.projects} users={this.state.users} createTodo={(text, creator, project) => this.createTodo(text, creator, project)}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
+                        <Route exact path='/users' component={() => this.is_auth()
+                            ? <UserList users={this.state.users}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>}/>
+                        <Route exact path='/users/:id' component={() => this.is_auth()
+                            ? <ProjectListUsers users={this.state.users} projects={this.state.projects}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>}/>
+                        <Route exact path='/projects' component={() => <ProjectList users={this.state.users} projects={this.state.projects} deleteProject={(id) => this.deleteProject(id)}/>}/>
+                        <Route exact path='/projects/create' component={() => this.is_auth()
+                            ? <ProjectCreateForm users={this.state.users} createProject={(name, link, users) => this.createProject(name, link, users)}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
+                        <Route exact path='/projects/change/:id' component={() => this.is_auth()
+                            ? <ProjectChangeForm projects={this.state.projects} users={this.state.users} changeProject={(id, name, link, users) => this.changeProject(id, name, link, users)}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
+                        <Route exact path='/projects/find' component={() => this.is_auth()
+                            ? <ProjectFindForm projects_search={this.state.projects_search} projects={this.state.projects} users={this.state.users} findProject={(search) => this.findProject(search)}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
                         <Route exact path='/projects/:id' component={() => <ProjectDetail users={this.state.users} projects={this.state.projects}/>}/>
 
                         <Route exact path='/login' component={() => <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
