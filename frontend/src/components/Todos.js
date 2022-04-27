@@ -1,6 +1,9 @@
 import React from "react";
 
-const TodoItem = ({todo, users, projects}) => {
+import {Link} from "react-router-dom";
+
+
+const TodoItem = ({todo, users, projects, deleteTodo}) => {
     let todo_create_date = todo.create.split('T')[0];
     let todo_create_time = todo.create.split('T')[1].split('.')[0];
 
@@ -28,9 +31,9 @@ const TodoItem = ({todo, users, projects}) => {
 
             <td>{todo.text}</td>
 
-            <td>{`${todo_create_date}-${todo_create_time}`}</td>
+            <td>{`${todo_create_date} / ${todo_create_time}`}</td>
 
-            <td>{`${todo_update_date}-${todo_update_time}`}</td>
+            <td>{`${todo_update_date} / ${todo_update_time}`}</td>
 
             <td>{todo.isActive.toString() === 'true'? '✅': '❌'}</td>
 
@@ -38,11 +41,13 @@ const TodoItem = ({todo, users, projects}) => {
 
             <td>{project}</td>
 
+            <td><button onClick={() => deleteTodo(todo.id)} type="button">УДАЛИТЬ</button></td>
+
         </tr>
     )
 }
 
-const TodoList = ({todos, users, projects}) => {
+const TodoList = ({todos, users, projects, deleteTodo}) => {
 
     return (
 
@@ -64,9 +69,13 @@ const TodoList = ({todos, users, projects}) => {
 
                 <th>Проект</th>
 
-                {todos.map((todo) => <TodoItem todo={todo} projects={projects} users={users}/>)}
+                <th>Удаление</th>
+
+                {todos.map((todo) => <TodoItem todo={todo} projects={projects} users={users} deleteTodo={deleteTodo}/>)}
 
             </table>
+
+            <Link to='/todo/create' className='create'>Создать заметку</Link>
 
         </main>
 

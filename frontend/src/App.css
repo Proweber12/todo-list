@@ -13,6 +13,10 @@ body {
   position: relative;
 }
 
+main {
+  margin-bottom: 70px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -129,12 +133,97 @@ td {
   text-align: center;
 }
 
+td > button {
+  width: 100%;
+  height: 30px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+}
+
 th {
-  padding: 0 90px;
+  padding: 0 55px;
   text-align: center;
+  background-color: #ABC9A4;
 }
 
 tr > a {
   width: 100%;
   text-align: center;
+}
+
+tr {
+  height: 100px;
+  background-color: #A1C0C0;
+}
+
+.create {
+  width: 100%;
+  height: 30px;
+  background-color: #32aa32;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.find {
+  width: 100%;
+  height: 30px;
+  background-color: #325caa;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.todo_create_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo_create_textarea {
+  height: 150px;
+}
+
+.todo_create_form > select {
+  background-color: orange;
+  height: 50px;
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
+}
+
+.todo_create_input_submit {
+  background-color: #24b730;
+  height: 50px;
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
+}
+
+.project_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.project_input {
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.project_form > select {
+  background-color: #2ea893;
+  height: 120px;
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
+}
+
+.project_input_submit {
+  background-color: #24b730;
+  height: 50px;
+  border-radius: 15px;
+  border-style: none;
+  margin-top: 10px;
 }
