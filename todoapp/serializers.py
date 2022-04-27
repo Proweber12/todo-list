@@ -4,14 +4,12 @@ from .models import Project, Todo
 
 
 class ProjectModelSerializer(ModelSerializer):
-
     class Meta:
         model = Project
-        fields = '__all__'
+        fields = "__all__"
 
 
 class TodoModelSerializer(ModelSerializer):
-
     class Meta:
         model = Todo
-        fields = '__all__'
+        fields = "__all__"

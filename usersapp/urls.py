@@ -1,13 +1,13 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from django.urls import include, path
+from rest_framework.routers import SimpleRouter
 
 from usersapp.views import UserCustomViewSet
 
-app_name = 'usersapp'
+app_name = "usersapp"
 
-router = DefaultRouter()
-router.register('', UserCustomViewSet)
+router = SimpleRouter()
+router.register("", UserCustomViewSet)
 
 urlpatterns = [
-    path('', include((router.urls, 'usersapp'))),
+    path("", include((router.urls, "usersapp"))),
 ]

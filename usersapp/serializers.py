@@ -7,11 +7,11 @@ class UserBaseModelSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id',
-            'username',
-            'first_name',
-            'last_name',
-            'email',
+            "id",
+            "username",
+            "first_name",
+            "last_name",
+            "email",
         )
 
 
@@ -19,11 +19,11 @@ class UserModelSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'id',
-            'username',
-            'first_name',
-            'last_name',
-            'email',
-            'is_superuser',
-            'is_staff',
+            "id",
+            "username",
+            "first_name",
+            "last_name",
+            "email",
+            "is_superuser",
+            "is_staff",
         )

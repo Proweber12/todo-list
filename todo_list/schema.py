@@ -1,26 +1,26 @@
-from graphene import ObjectType, Schema, List, Field, Int, String, Mutation, ID
+from graphene import ID, Field, Int, List, Mutation, ObjectType, Schema, String
 from graphene_django import DjangoObjectType
 
+from todoapp.models import Project, Todo
 from usersapp.models import User
-from todoapp.models import Todo, Project
 
 
 class UsersType(DjangoObjectType):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = "__all__"
 
 
 class TodosType(DjangoObjectType):
     class Meta:
         model = Todo
-        fields = '__all__'
+        fields = "__all__"
 
 
 class ProjectsType(DjangoObjectType):
     class Meta:
         model = Project
-        fields = '__all__'
+        fields = "__all__"
 
 
 class Query(ObjectType):
@@ -86,7 +86,6 @@ class Query(ObjectType):
 
 
 class UserUpdateMutation(Mutation):
-
     class Arguments:
         id = ID()
         username = String(required=False)
@@ -108,7 +107,6 @@ class UserUpdateMutation(Mutation):
 
 
 class TodoUpdateMutation(Mutation):
-
     class Arguments:
         id = ID()
         text = String(required=False)
@@ -128,7 +126,6 @@ class TodoUpdateMutation(Mutation):
 
 
 class ProjectUpdateMutation(Mutation):
-
     class Arguments:
         id = ID()
         name = String(required=False)
@@ -157,63 +154,63 @@ schema = Schema(query=Query, mutation=Mutations)
 # Готовые запросы на получение данных
 
 # {
-  # allUsers{
-  #   id
-  #   username
-  #   firstName
-  #   lastName
-  #   isActive
-  #   todoSet{
-  #     text
-  #   }
-  # }
-  # userByUsername(username:"admin"){
-  #   username
-  #   lastName
-  # }
-  # allTodos{
-  #   id
-  #   text
-  #   create
-  #   update
-  #   creator {
-  #     id
-  #     username
-  #     firstName
-  #   }
-  #   project{
-  #     id
-  #     name
-  #     link
-  #   }
-  # }
-  # todoById(id:2){
-  #   id
-  #   text
-  #   creator{
-  #     username
-  #   }
-  # }
-  # todoByUser(username:"Max69"){
-  #   text
-  # }
-  # todoByProject(name:"Кирпич"){
-  #   text
-  #   isActive
-  # }
-  # allProjects{
-  #   id
-  #   name
-  #   link
-  # }
-  #   projectByName(name:"Кирпич"){
-  #   name
-  #   link
-  # }
-  # projectByUser(username:"Petya23"){
-  #   name
-  #   link
-  # }
+# allUsers{
+#   id
+#   username
+#   firstName
+#   lastName
+#   isActive
+#   todoSet{
+#     text
+#   }
+# }
+# userByUsername(username:"admin"){
+#   username
+#   lastName
+# }
+# allTodos{
+#   id
+#   text
+#   create
+#   update
+#   creator {
+#     id
+#     username
+#     firstName
+#   }
+#   project{
+#     id
+#     name
+#     link
+#   }
+# }
+# todoById(id:2){
+#   id
+#   text
+#   creator{
+#     username
+#   }
+# }
+# todoByUser(username:"Max69"){
+#   text
+# }
+# todoByProject(name:"Кирпич"){
+#   text
+#   isActive
+# }
+# allProjects{
+#   id
+#   name
+#   link
+# }
+#   projectByName(name:"Кирпич"){
+#   name
+#   link
+# }
+# projectByUser(username:"Petya23"){
+#   name
+#   link
+# }
 # }
 
 # Готовые мутации
@@ -255,4 +252,3 @@ schema = Schema(query=Query, mutation=Mutations)
 #     }
 #   }
 # }
-
