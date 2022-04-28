@@ -11,6 +11,7 @@
 * `PyCharm`
 * `SQLite3`
 * `PostgreSQL`
+* `Docker/Docker Compose`
 
 ## Лицензия
 
