@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99d24f7a-4839-4779-ab95-8b7ce0a572b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/PageNotFound.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotFound404.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectChangeForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectCreateForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectFindForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TodoCreateForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Todos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UserProjects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../venv/lib/python3.8/site-packages/django/contrib/auth/models.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25sVPFeMqN1mISZ88dHHqM7sslz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/mihail/Desktop/djangoREST/todo-list",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/todoapp/management/commands" />
+      <recent name="$PROJECT_DIR$/todoapp" />
+      <recent name="$PROJECT_DIR$/frontend/src/components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Django">
+    <configuration name="Django" type="PythonConfigurationType" factoryName="Python">
+      <module name="todo_list" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver 127.0.0.1:8000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test Debug" type="PythonConfigurationType" factoryName="Python">
+      <module name="todo_list" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="todo_list.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="test" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="todo_list" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.TestUserCustomViewSet.test_create_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="todo_list" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/usersapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.TestUserCustomViewSet.test_create_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Test Debug" />
+      <item itemvalue="Python.Django" />
+      <item itemvalue="Python.api" />
+      <item itemvalue="Python tests.Python tests for tests.TestUserCustomViewSet.test_create_user" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.TestUserCustomViewSet.test_create_user" />
+        <item itemvalue="Python.api" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99d24f7a-4839-4779-ab95-8b7ce0a572b5" name="Changes" comment="" />
+      <created>1646315756160</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646315756160</updated>
+      <workItem from="1646656295232" duration="10919000" />
+      <workItem from="1647068184626" duration="598000" />
+      <workItem from="1647166694771" duration="1305000" />
+      <workItem from="1648019304228" duration="11044000" />
+      <workItem from="1648049919918" duration="9008000" />
+      <workItem from="1648372003133" duration="531000" />
+      <workItem from="1648399432800" duration="5985000" />
+      <workItem from="1648446995411" duration="4703000" />
+      <workItem from="1648479888609" duration="28000" />
+      <workItem from="1648544402566" duration="119000" />
+      <workItem from="1648629223094" duration="99000" />
+      <workItem from="1648631105771" duration="683000" />
+      <workItem from="1648644464087" duration="38000" />
+      <workItem from="1648712525917" duration="664000" />
+      <workItem from="1648998660981" duration="3028000" />
+      <workItem from="1649051412425" duration="3933000" />
+      <workItem from="1649056051409" duration="22914000" />
+      <workItem from="1649235991081" duration="853000" />
+      <workItem from="1649270915175" duration="5958000" />
+      <workItem from="1649310843958" duration="17643000" />
+      <workItem from="1649401975119" duration="1876000" />
+      <workItem from="1649440134743" duration="405000" />
+      <workItem from="1649484467706" duration="1694000" />
+      <workItem from="1649486213566" duration="67000" />
+      <workItem from="1649486310155" duration="7953000" />
+      <workItem from="1649507742194" duration="11992000" />
+      <workItem from="1649584178625" duration="18253000" />
+      <workItem from="1649751866319" duration="13506000" />
+      <workItem from="1649932846581" duration="950000" />
+      <workItem from="1649998584887" duration="1214000" />
+      <workItem from="1650040826109" duration="254000" />
+      <workItem from="1650041309844" duration="4902000" />
+      <workItem from="1650086516718" duration="6075000" />
+      <workItem from="1650283596654" duration="3368000" />
+      <workItem from="1650381612876" duration="9326000" />
+      <workItem from="1650432557873" duration="8044000" />
+      <workItem from="1650519068017" duration="2635000" />
+      <workItem from="1650559453205" duration="529000" />
+      <workItem from="1650685453394" duration="7677000" />
+      <workItem from="1650812759895" duration="8374000" />
+      <workItem from="1650868381750" duration="23159000" />
+      <workItem from="1650973178862" duration="1336000" />
+      <workItem from="1651048365577" duration="2007000" />
+      <workItem from="1651129484447" duration="6431000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="response" />
+        <watch expression="access" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/todo_list$manage.coverage" NAME="Test Debug Coverage Results" MODIFIED="1649796238354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todo_list$.coverage" NAME=" Coverage Results" MODIFIED="1649788189915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/usersapp" />
+    <SUITE FILE_PATH="coverage/todo_list$Django.coverage" NAME="Django Coverage Results" MODIFIED="1651139937079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todo_list$api.coverage" NAME="api Coverage Results" MODIFIED="1649486016202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/todo_list$Test_Debug.coverage" NAME="Test Debug Coverage Results" MODIFIED="1650393410539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
