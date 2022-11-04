@@ -215,10 +215,10 @@ class App extends React.Component {
                             : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
                         <Route exact path='/users' component={() => this.is_auth()
                             ? <UserList users={this.state.users}/>
-                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>}/>
                         <Route exact path='/users/:id' component={() => this.is_auth()
                             ? <ProjectListUsers users={this.state.users} projects={this.state.projects}/>
-                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>
+                            : <LoginForm get_token={(username, password) => this.get_token(username, password)}/>}/>}/>
                         <Route exact path='/projects' component={() => <ProjectList users={this.state.users} projects={this.state.projects} deleteProject={(id) => this.deleteProject(id)}/>}/>
                         <Route exact path='/projects/create' component={() => this.is_auth()
                             ? <ProjectCreateForm users={this.state.users} createProject={(name, link, users) => this.createProject(name, link, users)}/>
